@@ -1,0 +1,44 @@
+﻿<Window x:Class="WpfApp5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp5"
+        mc:Ignorable="d"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="MainWindow" Height="600" Width="1000" Background="#E3EAA7"
+          WindowStartupLocation="Manual" 
+    Left="0" Top="0">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
+
+        </Grid.RowDefinitions>
+        <Image Source="/burger.png" Margin="10,8,891,486"  />
+        <TextBlock HorizontalAlignment="Center" Margin="0,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top"  Foreground ="#FF405D27" FontFamily="Verdana Pro Cond Semibold" Height="70" Width="208" FontSize="60"><Run Language="en-gb" Text="Foodies"/></TextBlock>
+        <Rectangle HorizontalAlignment="Center" Height="256" Margin="0,200,0,0" Stroke="#FF405D27" VerticalAlignment="Top" Width="266" RadiusY="30" RadiusX="30" AutomationProperties.HelpText="" Fill="#FF405D27" Opacity="0.2" />
+        <TextBox x:Name="Username_textbox" Style="{StaticResource MaterialDesignFloatingHintTextBox}"   
+                 materialDesign:HintAssist.Hint="Username"
+         HorizontalAlignment="Center" Margin="0,227,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208" Height="52" SelectionBrush="#FF405D27" 
+                
+                       HorizontalContentAlignment="Left"
+VerticalContentAlignment="Bottom"      materialDesign:HintAssist.Foreground="#FF405D27"
+materialDesign:TextFieldAssist.UnderlineBrush="#FF405D27"
+                                  SelectionTextBrush="#FF405D27" FontSize="14"  MaxLines="1" CaretBrush="#FF405D27" FontFamily="Segoe UI" Foreground="#FF405D27"/>
+        <PasswordBox x:Name="Password_passwordbox"  HorizontalAlignment="Center" 
+                     Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin="0,302,0,0" VerticalAlignment="Top" Width="208" Height="52"
+                     materialDesign:HintAssist.Hint="Password"
+                     SelectionBrush="#FF405D27" 
+                     SelectionTextBrush="#FF405D27" FontSize="14" CaretBrush="#FF405D27"
+HorizontalContentAlignment="Left"
+VerticalContentAlignment="Bottom"                     materialDesign:HintAssist.Foreground="#FF405D27"
+                     materialDesign:TextFieldAssist.UnderlineBrush="#FF405D27" Foreground="#FF405D27"/>
+        <Button x:Name="LogIn_Button" Content="Log In" HorizontalAlignment="Center" Margin="0,398,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.25,-1.543" Background="#FF405D27" Foreground="#FFD5E1DF" BorderBrush="White" Opacity="0.8" Click="Button_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="254,505,0,0" TextWrapping="Wrap" Text="Don't have an account?" VerticalAlignment="Top" Height="23" Width="197" Foreground="#FF3E4444" FontStyle="Italic" FontSize="18"/>
+        <Button x:Name="SignUp_Button"
+            Content="Sign up" HorizontalAlignment="Left" Margin="575,495,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.206,-0.186" Width="96" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF3E4444" FontSize="18" FontWeight="Normal" Height="34" Click="SignUp_Button_Click" />
+
+        <Rectangle  VerticalAlignment="Top" Fill="Black" Height="2" Margin="588,527,329,0" Opacity="0.8"/>
+    </Grid>
+</Window>
